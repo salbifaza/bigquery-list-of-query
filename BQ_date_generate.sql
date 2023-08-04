@@ -1,0 +1,3 @@
+SELECT 
+    date, DATE_TRUNC(date, MONTH) month
+FROM UNNEST(GENERATE_DATE_ARRAY('2013-11-01', DATE_ADD(current_date, INTERVAL 30 day) )) AS date
